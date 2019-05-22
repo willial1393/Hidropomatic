@@ -1,0 +1,145 @@
+<div class="row">
+    <div class="col-sm">
+        <p-card>
+            <div style="text-align: center">
+                <strong>Sistema de temperatura</strong>
+            </div>
+            <div style="text-align: right; margin-right: 20%">
+                <div class="col-sm">
+                    Calefactor
+                    <p-radioButton class="indicador-on" name="temperatura" value="1" disabled
+                                   [(ngModel)]="calefactor"></p-radioButton>
+                </div>
+                <div class="col-sm">
+                    Ventilador
+                    <p-radioButton class="indicador-on" name="temperatura" value="1" disabled
+                                   [(ngModel)]="ventilador"></p-radioButton>
+                </div>
+                <div class="col-sm">
+                    Alerta
+                    <p-radioButton class="indicador-alert" name="temperatura" value="1" disabled
+                                   [(ngModel)]="alertaTemperatura"></p-radioButton>
+                </div>
+            </div>
+        </p-card>
+    </div>
+    <div class="col-sm">
+        <p-card>
+            <div style="text-align: center">
+                <strong>Sistema de humedad</strong>
+            </div>
+            <div style="text-align: right; margin-right: 15%">
+                <div class="col-sm">
+                    Humificador
+                    <p-radioButton class="indicador-on" name="humedad" value="1" disabled
+                                   [(ngModel)]="humificador"></p-radioButton>
+                </div>
+                <div class="col-sm">
+                    Deshumificador
+                    <p-radioButton class="indicador-on" name="humedad" value="1" disabled
+                                   [(ngModel)]="deshumificador"></p-radioButton>
+                </div>
+                <div class="col-sm">
+                    Alerta
+                    <p-radioButton class="indicador-alert" name="humedad" value="1" disabled
+                                   [(ngModel)]="alertaHumedad"></p-radioButton>
+                </div>
+            </div>
+        </p-card>
+
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-sm">
+        <p-card>
+            <div style="text-align: center">
+                <strong>Sistema de Nivel</strong>
+            </div>
+            <div style="text-align: right; margin-right: 20%">
+                <div class="col-sm">
+                    Bomba
+                    <p-radioButton class="indicador-on" name="nivel" value="1"
+                                   [(ngModel)]="bomba"></p-radioButton>
+                </div>
+                <div class="col-sm">
+                    Alerta
+                    <p-radioButton class="indicador-alert" name="nivel" value="1"
+                                   [(ngModel)]="alertaNivel"></p-radioButton>
+                </div>
+            </div>
+        </p-card>
+    </div>
+    <div class="col-sm">
+        <p-card>
+            <strong>Sistema de pH</strong>
+            <div style="text-align: right; margin-right: 20%">
+                <div class="col-sm">
+                    pH elevado
+                    <p-radioButton class="indicador-on" name="ph" value="1"
+                                   [(ngModel)]="phElevado"></p-radioButton>
+                </div>
+                <div class="col-sm">
+                    pH bajo
+                    <p-radioButton class="indicador-on" name="ph" value="1"
+                                   [(ngModel)]="phBajo"></p-radioButton>
+                </div>
+                <div class="col-sm">
+                    Alerta
+                    <p-radioButton class="indicador-alert" name="ph" value="1"
+                                   [(ngModel)]="alertaPh"></p-radioButton>
+                </div>
+            </div>
+        </p-card>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-sm">
+        <p-panel header="Estado de las plantas">
+            <p>
+                <p-radioButton name="plantas" value="Enraizamiento" [(ngModel)]="selectedValue"></p-radioButton>
+                Enraizamiento
+            </p>
+            <p>
+                <p-radioButton name="plantas" value="Vegetativo" [(ngModel)]="selectedValue"></p-radioButton>
+                Vegetativo
+            </p>
+            <p>
+                <p-radioButton name="plantas" value="Floracion" [(ngModel)]="selectedValue"></p-radioButton>
+                Floración
+            </p>
+        </p-panel>
+    </div>
+    <div class="col-sm">
+        <p-card>
+            <div class="row">
+                <div class="col-sm">
+                    Aire
+                    <p-radioButton class="indicador-on" name="aire" value="1"
+                                   [(ngModel)]="aire"></p-radioButton>
+                </div>
+                <div class="col-sm">
+                    Motor
+                    <p-radioButton class="indicador-alert" name="motor" value="1"
+                                   [(ngModel)]="motor"></p-radioButton>
+                </div>
+            </div>
+        </p-card>
+        <br>
+        <p-card>
+            <div class="row">
+                <div class="col-sm">
+                    <p-toggleButton onLabel="Start" offLabel="Start" class="success"
+                                    onIcon="pi pi-check" offIcon="pi pi-times" [(ngModel)]="start"></p-toggleButton>
+                </div>
+                <div class="col-sm">
+                    <p-toggleButton onLabel="Stop" offLabel="Stop" class="danger" (click)="start = !start"
+                                    onIcon="pi pi-check" offIcon="pi pi-times" [(ngModel)]="!start"></p-toggleButton>
+                </div>
+
+            </div>
+        </p-card>
+    </div>
+</div>
+

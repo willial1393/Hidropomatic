@@ -1,6 +1,7 @@
 <?php
 
 use Models\Actuadores;
+use Models\Indicadores;
 use Models\Sensores;
 use Slim\App;
 use Slim\Http\Request;
@@ -16,6 +17,12 @@ return function (App $app) {
 
     $app->get('/actuadores/', function (Request $request, Response $response, array $args) {
         $res = Actuadores::get();
+        $response->getBody()->write($res);
+        return $response;
+    });
+
+    $app->get('/indicadores/', function (Request $request, Response $response, array $args) {
+        $res = Indicadores::get();
         $response->getBody()->write($res);
         return $response;
     });

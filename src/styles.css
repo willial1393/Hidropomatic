@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+    font-family: Tahoma, serif;
+}
+
+body .indicador-on .ui-radiobutton .ui-radiobutton-box.ui-state-active {
+    border-color: #00ac13;
+    background-color: #00ac13;
+    color: #ffffff;
+}
+
+body .indicador-alert .ui-radiobutton .ui-radiobutton-box.ui-state-active {
+    border-color: #f3cd0f;
+    background-color: #f3cd0f;
+    color: #ffffff;
+}
+
+body .danger .ui-togglebutton.ui-state-active {
+    background-color: #d91828;
+    border-color: #d91828;
+    color: #ffffff;
+}
+
+body .success .ui-togglebutton.ui-state-active {
+    background-color: #61d936;
+    border-color: #61d936;
+    color: #ffffff;
+}
