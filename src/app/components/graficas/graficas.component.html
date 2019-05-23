@@ -1,7 +1,9 @@
 <p-toast [style]="{marginTop: '80px'}"></p-toast>
-<p-panel header="Temperatura" [toggleable]="true">
-    <p-chart type="line" [data]="temperatura" (onDataSelect)="selectDataTemperatura($event)"></p-chart>
-</p-panel>
-<p-panel header="Ventilador" [toggleable]="true">
-    <p-chart type="line" [data]="ventilador" (onDataSelect)="selectDataVentilador($event)"></p-chart>
-</p-panel>
+<p-accordion>
+    <p-accordionTab header="Temperatura" [selected]="true">
+        <p-chart type="line" [data]="temperatura" (onDataSelect)="selectDataTemperatura($event)"></p-chart>
+    </p-accordionTab>
+    <p-accordionTab header="Ventilador">
+        <p-chart type="line" [data]="ventilador" (onDataSelect)="selectDataVentilador($event)"></p-chart>
+    </p-accordionTab>
+</p-accordion>

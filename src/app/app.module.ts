@@ -9,6 +9,8 @@ import {ActuadoresComponent} from './components/actuadores/actuadores.component'
 import {SensoresComponent} from './components/sensores/sensores.component';
 import {CardModule} from 'primeng/card';
 import {
+    AccordionModule,
+    AccordionTab,
     ButtonModule,
     ChartModule,
     FieldsetModule,
@@ -39,10 +41,12 @@ import {ToastModule} from 'primeng/toast';
         ToggleButtonModule,
         ProgressBarModule,
         ChartModule,
-        ToastModule
+        ToastModule,
+        AccordionModule
     ],
     providers: [
-        MessageService
+        MessageService,
+        AccordionTab
     ],
     bootstrap: [AppComponent]
 })
