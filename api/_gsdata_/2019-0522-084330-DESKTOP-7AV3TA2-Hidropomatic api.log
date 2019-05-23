@@ -1,0 +1,22 @@
+2019-05-22 08:43:33: -- Analysis Started by User Command
+2019-05-22 08:43:47: Cannot read folder ftp://files.000webhost.com/public_html/api/vendor/doctrine/inflector/lib/Doctrine/Common: server says after data transfer: 500: MLSD: Connection timed out
+2019-05-22 08:43:47: FTP: MLSD is broken, so turn it off: PASV says: 250: OK. Current directory is /public_html/api/vendor/doctrine/instantiator
+2019-05-22 08:44:34: Cannot read folder ftp://files.000webhost.com/public_html/api/vendor/phpdocumentor/reflection-common: server says after data transfer: 500: LIST: Connection timed out
+2019-05-22 08:44:34: Cannot read folder ftp://files.000webhost.com/public_html/api/vendor/phpdocumentor/reflection-docblock: listing folder with LIST: PASV says: 250: OK. Current directory is /public_html/api/vendor/phpdocumentor/reflection-docblock
+2019-05-22 08:44:34: Cannot read folder ftp://files.000webhost.com/public_html/api/vendor/phpdocumentor/type-resolver: listing folder with LIST: PASV says: 250: OK. Current directory is /public_html/api/vendor/phpdocumentor/type-resolver
+2019-05-22 08:44:34: Cannot read folder ftp://files.000webhost.com/public_html/api/vendor/phpspec: listing folder with LIST: PASV says: 250: OK. Current directory is /public_html/api/vendor/phpspec
+2019-05-22 08:44:34: Cannot read folder ftp://files.000webhost.com/public_html/api/vendor/phpunit: listing folder with LIST: PASV says: 250: OK. Current directory is /public_html/api/vendor/phpunit
+2019-05-22 08:44:35: Cannot read folder ftp://files.000webhost.com/public_html/api/vendor/pimple: listing folder with LIST: PASV says: 250: OK. Current directory is /public_html/api/vendor/pimple
+2019-05-22 08:44:35: Cannot read folder ftp://files.000webhost.com/public_html/api/vendor/psr: listing folder with LIST: PASV says: 250: OK. Current directory is /public_html/api/vendor/psr
+2019-05-22 08:44:35: Cannot read folder ftp://files.000webhost.com/public_html/api/vendor/sebastian: listing folder with LIST: PASV says: 250: OK. Current directory is /public_html/api/vendor/sebastian
+2019-05-22 08:44:35: Cannot read folder ftp://files.000webhost.com/public_html/api/vendor/slim: listing folder with LIST: PASV says: 250: OK. Current directory is /public_html/api/vendor/slim
+2019-05-22 08:44:35: Cannot read folder ftp://files.000webhost.com/public_html/api/vendor/symfony: listing folder with LIST: PASV says: 250: OK. Current directory is /public_html/api/vendor/symfony
+2019-05-22 08:44:35: Cannot read folder ftp://files.000webhost.com/public_html/api/vendor/theseer: listing folder with LIST: PASV says: 250: OK. Current directory is /public_html/api/vendor/theseer
+2019-05-22 08:44:35: Cannot read folder ftp://files.000webhost.com/public_html/api/vendor/webmozart: listing folder with LIST: PASV says: 250: OK. Current directory is /public_html/api/vendor/webmozart
+2019-05-22 08:44:35: R: Old-New Rounding Time Shift of 0 hours (type 1) detected for 2% (31/1344) files. Decided: No Change on this side
+2019-05-22 08:44:35: R: Old-New Rounding Time Shift of 0 hours (type 2) detected for 90% (1211/1344) files. Decided: No Change on this side
+2019-05-22 08:44:35: Analyze has finished with Errors. Click Errors button to see all error items
+2019-05-22 08:44:35: Changes: 2.649, Conflicts: 0, CopyTime: 0, FixState: 1.253, Errors: 2.292, All: 4118
+2019-05-22 08:44:35: Left to Right: Copy File: 357 
+2019-05-22 08:44:35: Conflicts (0) or Errors (2292) in Analyze, waiting 30 sec for you to resolve them, before proceeding with Sync
+2019-05-22 08:44:35: 

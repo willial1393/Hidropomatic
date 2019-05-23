@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-sm">
         <p-card>
-            <div style="text-align: center">
+            <div class="text-center">
                 <strong>Sistema de temperatura</strong>
             </div>
             <div style="text-align: right; margin-right: 20%">
@@ -25,10 +25,10 @@
     </div>
     <div class="col-sm">
         <p-card>
-            <div style="text-align: center">
+            <div class="text-center">
                 <strong>Sistema de humedad</strong>
             </div>
-            <div style="text-align: right; margin-right: 15%">
+            <div style="text-align: right; margin-right: 12%">
                 <div class="col-sm">
                     Humificador
                     <p-radioButton class="indicador-on" name="humedad" value="1" disabled
@@ -53,7 +53,7 @@
 <div class="row">
     <div class="col-sm">
         <p-card>
-            <div style="text-align: center">
+            <div class="text-center">
                 <strong>Sistema de Nivel</strong>
             </div>
             <div style="text-align: right; margin-right: 20%">
@@ -72,7 +72,9 @@
     </div>
     <div class="col-sm">
         <p-card>
-            <strong>Sistema de pH</strong>
+            <div class="text-center">
+                <strong>Sistema de pH</strong>
+            </div>
             <div style="text-align: right; margin-right: 20%">
                 <div class="col-sm">
                     pH elevado
@@ -114,15 +116,11 @@
     <div class="col-sm">
         <p-card>
             <div class="row">
-                <div class="col-sm">
+                <div class="col-sm text-center">
                     Aire
                     <p-radioButton class="indicador-on" name="aire" value="1"
+                                   disabled
                                    [(ngModel)]="aire"></p-radioButton>
-                </div>
-                <div class="col-sm">
-                    Motor
-                    <p-radioButton class="indicador-alert" name="motor" value="1"
-                                   [(ngModel)]="motor"></p-radioButton>
                 </div>
             </div>
         </p-card>

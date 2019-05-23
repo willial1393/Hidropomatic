@@ -8,13 +8,24 @@ import {PanelModule} from 'primeng/panel';
 import {ActuadoresComponent} from './components/actuadores/actuadores.component';
 import {SensoresComponent} from './components/sensores/sensores.component';
 import {CardModule} from 'primeng/card';
-import {ButtonModule, FieldsetModule, RadioButtonModule, ToggleButtonModule} from 'primeng/primeng';
+import {
+    ButtonModule,
+    ChartModule,
+    FieldsetModule,
+    MessageService,
+    ProgressBarModule,
+    RadioButtonModule,
+    ToggleButtonModule
+} from 'primeng/primeng';
+import {GraficasComponent} from './components/graficas/graficas.component';
+import {ToastModule} from 'primeng/toast';
 
 @NgModule({
     declarations: [
         AppComponent,
         ActuadoresComponent,
-        SensoresComponent
+        SensoresComponent,
+        GraficasComponent
     ],
     imports: [
         BrowserModule,
@@ -25,9 +36,14 @@ import {ButtonModule, FieldsetModule, RadioButtonModule, ToggleButtonModule} fro
         FieldsetModule,
         RadioButtonModule,
         ButtonModule,
-        ToggleButtonModule
+        ToggleButtonModule,
+        ProgressBarModule,
+        ChartModule,
+        ToastModule
     ],
-    providers: [],
+    providers: [
+        MessageService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {

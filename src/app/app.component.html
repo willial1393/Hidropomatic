@@ -4,17 +4,22 @@
     </div>
     <div class="row">
         <div class="col-sm">
-            <p-panel header="Estado de los actuadores">
+            <p-panel header="Estado de los actuadores" [toggleable]="true">
                 <app-actuadores></app-actuadores>
             </p-panel>
         </div>
         <div class="col-sm">
-            <p-panel header="Estado de los instrumentos en campo">
+            <app-graficas></app-graficas>
+        </div>
+    </div>
+    <br>
+    <div class="row text-center">
+        <div style="margin: 0 auto">
+            <p-panel header="Estado de los instrumentos en campo" [toggleable]="true">
                 <app-sensores></app-sensores>
             </p-panel>
         </div>
     </div>
-
     <p-footer style="text-align: center;">
         <p>Copyright © 2019 - Todos los derechos reservados.</p>
     </p-footer>

@@ -15,6 +15,12 @@ return function (App $app) {
         return $response;
     });
 
+    $app->post('/sensores/', function (Request $request, Response $response, array $args) {
+        $res = $request['name'];
+        $response->getBody()->write($res);
+        return $response;
+    });
+
     $app->get('/actuadores/', function (Request $request, Response $response, array $args) {
         $res = Actuadores::get();
         $response->getBody()->write($res);
