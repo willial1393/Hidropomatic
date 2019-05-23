@@ -4,8 +4,8 @@ namespace Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Indicadores extends Model
+class Graficas extends Model
 {
-    protected $table = 'indicadores';
+    protected $table = 'graficas';
     public $timestamps = false;
 }

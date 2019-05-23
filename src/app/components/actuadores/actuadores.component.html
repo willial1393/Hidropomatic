@@ -59,12 +59,12 @@
             <div style="text-align: right; margin-right: 20%">
                 <div class="col-sm">
                     Bomba
-                    <p-radioButton class="indicador-on" name="nivel" value="1"
+                    <p-radioButton class="indicador-on" name="nivel" value="1" disabled
                                    [(ngModel)]="bomba"></p-radioButton>
                 </div>
                 <div class="col-sm">
                     Alerta
-                    <p-radioButton class="indicador-alert" name="nivel" value="1"
+                    <p-radioButton class="indicador-alert" name="nivel" value="1" disabled
                                    [(ngModel)]="alertaNivel"></p-radioButton>
                 </div>
             </div>
@@ -78,17 +78,17 @@
             <div style="text-align: right; margin-right: 20%">
                 <div class="col-sm">
                     pH elevado
-                    <p-radioButton class="indicador-on" name="ph" value="1"
+                    <p-radioButton class="indicador-on" name="ph" value="1" disabled
                                    [(ngModel)]="phElevado"></p-radioButton>
                 </div>
                 <div class="col-sm">
                     pH bajo
-                    <p-radioButton class="indicador-on" name="ph" value="1"
+                    <p-radioButton class="indicador-on" name="ph" value="1" disabled
                                    [(ngModel)]="phBajo"></p-radioButton>
                 </div>
                 <div class="col-sm">
                     Alerta
-                    <p-radioButton class="indicador-alert" name="ph" value="1"
+                    <p-radioButton class="indicador-alert" name="ph" value="1" disabled
                                    [(ngModel)]="alertaPh"></p-radioButton>
                 </div>
             </div>
@@ -118,8 +118,7 @@
             <div class="row">
                 <div class="col-sm text-center">
                     Aire
-                    <p-radioButton class="indicador-on" name="aire" value="1"
-                                   disabled
+                    <p-radioButton class="indicador-on" name="aire" value="1" disabled
                                    [(ngModel)]="aire"></p-radioButton>
                 </div>
             </div>
