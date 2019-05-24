@@ -1,16 +1,16 @@
 <div class="row">
     <div class="col-sm grafica">
-        <p-chart type="bar" [data]="temperatura"></p-chart>
+        <p-chart #chartTemperatura type="bar" [data]="temperatura"></p-chart>
     </div>
     <div class="col-sm grafica">
-        <p-chart type="bar" [data]="humedad"></p-chart>
+        <p-chart #chartHumendad type="bar" [data]="humedad"></p-chart>
     </div>
 </div>
 <div class="row">
     <div class="col-sm grafica">
-        <p-chart type="bar" [data]="nivel"></p-chart>
+        <p-chart #chartNivel type="bar" [data]="nivel"></p-chart>
     </div>
     <div class="col-sm grafica">
-        <p-chart type="bar" [data]="ph"></p-chart>
+        <p-chart #chartPH type="bar" [data]="ph"></p-chart>
     </div>
 </div>
