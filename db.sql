@@ -17,7 +17,6 @@ CREATE DATABASE IF NOT EXISTS `id9671562_db` /*!40100 DEFAULT CHARACTER SET utf8
 USE `id9671562_db`;
 
 -- Volcando estructura para tabla id9671562_db.graficas
-DROP TABLE IF EXISTS `graficas`;
 CREATE TABLE IF NOT EXISTS `graficas` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `nombre` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0',
@@ -50,8 +49,7 @@ INSERT INTO `graficas` (`id`, `nombre`, `dato`, `tiempo`) VALUES
 /*!40000 ALTER TABLE `graficas` ENABLE KEYS */;
 
 -- Volcando estructura para tabla id9671562_db.indicadores
-DROP TABLE IF EXISTS `indicadores`;
-CREATE TABLE IF NOT EXISTS `indicadores` (
+CREATE TABLE IF NOT EXISTS `indicadores`(
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `start` char(1) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0',
   `aire` char(1) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0',
@@ -70,17 +68,34 @@ CREATE TABLE IF NOT EXISTS `indicadores` (
   `phBajo` char(1) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0',
   `alertaPh` char(1) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE = InnoDB
+  AUTO_INCREMENT = 2
+  DEFAULT CHARSET = utf8mb4
+  COLLATE = utf8mb4_unicode_ci;
 
--- Volcando datos para la tabla id9671562_db.indicadores: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla id9671562_db.indicadores: ~0 rows (aproximadamente)
 DELETE FROM `indicadores`;
 /*!40000 ALTER TABLE `indicadores` DISABLE KEYS */;
-INSERT INTO `indicadores` (`id`, `start`, `aire`, `enraizamiento`, `vegetativo`, `floracion`, `calefactor`, `ventilador`, `alertaTemperatura`, `humificador`, `deshumificador`, `alertaHumedad`, `bomba`, `alertaNivel`, `phElevado`, `phBajo`, `alertaPh`) VALUES
-	(1, '1', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `indicadores` (`id`, `start`, `aire`, `enraizamiento`, `vegetativo`, `floracion`, `calefactor`, `ventilador`, `alertaTemperatura`, `humificador`, `deshumificador`, `alertaHumedad`, `bomba`, `alertaNivel`, `phElevado`, `phBajo`, `alertaPh`) VALUES (1,
+                                                                                                                                                                                                                                                                    '1',
+                                                                                                                                                                                                                                                                    '1',
+                                                                                                                                                                                                                                                                    '1',
+                                                                                                                                                                                                                                                                    '0',
+                                                                                                                                                                                                                                                                    '0',
+                                                                                                                                                                                                                                                                    '1',
+                                                                                                                                                                                                                                                                    '0',
+                                                                                                                                                                                                                                                                    '0',
+                                                                                                                                                                                                                                                                    '1',
+                                                                                                                                                                                                                                                                    '0',
+                                                                                                                                                                                                                                                                    '0',
+                                                                                                                                                                                                                                                                    '0',
+                                                                                                                                                                                                                                                                    '0',
+                                                                                                                                                                                                                                                                    '0',
+                                                                                                                                                                                                                                                                    '0',
+                                                                                                                                                                                                                                                                    '0');
 /*!40000 ALTER TABLE `indicadores` ENABLE KEYS */;
 
 -- Volcando estructura para tabla id9671562_db.sensores
-DROP TABLE IF EXISTS `sensores`;
 CREATE TABLE IF NOT EXISTS `sensores` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `temperatura` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0',
@@ -94,8 +109,7 @@ CREATE TABLE IF NOT EXISTS `sensores` (
 -- Volcando datos para la tabla id9671562_db.sensores: ~1 rows (aproximadamente)
 DELETE FROM `sensores`;
 /*!40000 ALTER TABLE `sensores` DISABLE KEYS */;
-INSERT INTO `sensores` (`id`, `temperatura`, `humedad`, `nivel1`, `nivel2`, `ph`) VALUES
-	(1, '10', '2', '0', '0', '0');
+INSERT INTO `sensores` (`id`, `temperatura`, `humedad`, `nivel1`, `nivel2`, `ph`) VALUES (1, '10', '2', '50', '52', '12');
 /*!40000 ALTER TABLE `sensores` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
