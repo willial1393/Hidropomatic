@@ -5,7 +5,7 @@ import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
 import {PanelModule} from 'primeng/panel';
-import {ActuadoresComponent} from './components/actuadores/actuadores.component';
+import {IndicadoresComponent} from './components/indicadores/indicadores.component';
 import {SensoresComponent} from './components/sensores/sensores.component';
 import {CardModule} from 'primeng/card';
 import {
@@ -21,11 +21,12 @@ import {
 } from 'primeng/primeng';
 import {GraficasComponent} from './components/graficas/graficas.component';
 import {ToastModule} from 'primeng/toast';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
     declarations: [
         AppComponent,
-        ActuadoresComponent,
+        IndicadoresComponent,
         SensoresComponent,
         GraficasComponent
     ],
@@ -33,6 +34,7 @@ import {ToastModule} from 'primeng/toast';
         BrowserModule,
         BrowserAnimationsModule,
         FormsModule,
+        HttpClientModule,
         PanelModule,
         CardModule,
         FieldsetModule,
