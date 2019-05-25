@@ -1,33 +1,51 @@
-<p-card>
-    <div style="text-align: center; margin-bottom: 15px">
-        <p-card header="HIDROPOMATIC-ESPINACAS"></p-card>
-    </div>
-    <div class="row">
-        <div class="col-sm" style="min-width: 40%">
-            <p-accordion>
-                <p-accordionTab header="Estado de los actuadores" [selected]="true">
-                    <app-indicadores></app-indicadores>
-                </p-accordionTab>
-            </p-accordion>
+<div style="margin: 1px">
+    <p-card>
+        <div style="text-align: center; margin-bottom: 15px">
+            <p-card header="HIDROPOMATIC-ESPINACAS"></p-card>
         </div>
-        <div class="col-sm">
-            <app-graficas></app-graficas>
-        </div>
-    </div>
-    <br>
-    <div class="row text-center">
-        <div style="margin: 0 auto">
-            <div style="margin: 15px">
+        <div class="row">
+            <div class="col-sm" style="min-width: 40%">
                 <p-accordion>
-                    <p-accordionTab header="Estado de los instrumentos en campo">
-                        <app-sensores></app-sensores>
+                    <p-accordionTab header="Estado de los actuadores" [selected]="true">
+                        <app-indicadores></app-indicadores>
                     </p-accordionTab>
                 </p-accordion>
             </div>
+            <div class="col-sm">
+                <app-graficas></app-graficas>
+            </div>
         </div>
-    </div>
-    <p-footer style="text-align: center;">
-        <p>Copyright © 2019 - Todos los derechos reservados.</p>
-    </p-footer>
-</p-card>
+        <br>
+        <div class="row text-center">
+            <div style="margin: 0 auto">
+                <div style="margin: 15px">
+                    <p-accordion>
+                        <p-accordionTab header="Estado de los instrumentos en campo">
+                            <app-sensores></app-sensores>
+                        </p-accordionTab>
+                    </p-accordion>
+                </div>
+            </div>
+        </div>
+        <p-footer style="text-align: center;">
+            <p>Copyright © 2019 - Todos los derechos reservados.</p>
+        </p-footer>
+    </p-card>
+</div>
 
+<!-- Button trigger loading -->
+<button hidden id="openLoading" type="button" class="btn btn-primary" data-toggle="modal"
+        data-target="#exampleModalLoad">
+    Launch demo modal
+</button>
+
+<!-- Modal loading -->
+<div class="modal " id="exampleModalLoad" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="width: fit-content">
+        <img class="superponer" src="../assets/loading.svg" alt="">
+        <button hidden="true" id="closeLoading" type="button" class="btn btn-secondary" data-dismiss="modal">
+            Close
+        </button>
+    </div>
+</div>

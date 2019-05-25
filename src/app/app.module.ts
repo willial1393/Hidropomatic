@@ -13,9 +13,11 @@ import {
     AccordionTab,
     ButtonModule,
     ChartModule,
+    DialogModule,
     FieldsetModule,
     MessageService,
     ProgressBarModule,
+    ProgressSpinnerModule,
     RadioButtonModule,
     ToggleButtonModule
 } from 'primeng/primeng';
@@ -44,7 +46,9 @@ import {HttpClientModule} from '@angular/common/http';
         ProgressBarModule,
         ChartModule,
         ToastModule,
-        AccordionModule
+        AccordionModule,
+        ProgressSpinnerModule,
+        DialogModule
     ],
     providers: [
         MessageService,

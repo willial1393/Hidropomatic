@@ -1,6 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {MatlabService} from '../../services/matlab.service';
 import {Indicadores} from '../../models/indicadores';
+import {AppComponent} from '../../app.component';
 
 @Component({
     selector: 'app-indicadores',
@@ -17,7 +18,8 @@ export class IndicadoresComponent implements OnInit, OnDestroy {
     stop: boolean;
 
 
-    constructor(private matlabService: MatlabService) {
+    constructor(private matlabService: MatlabService,
+                private app: AppComponent) {
     }
 
     getIndicadores() {
@@ -29,8 +31,16 @@ export class IndicadoresComponent implements OnInit, OnDestroy {
     }
 
     setIndicadores() {
+        this.app.showLoading();
         this.indicadores.start = this.start ? 1 : 0;
-        this.matlabService.postIndicadores(this.indicadores).subscribe();
+        this.matlabService.postIndicadores(this.indicadores).subscribe(res => {
+            this.matlabService.getIndicadores().subscribe(res2 => {
+                Object.assign(this.indicadores, res2);
+                this.start = this.indicadores.start.toString() === '1';
+                this.stop = !this.start;
+                this.app.hiddenLoading();
+            });
+        });
     }
 
     ngOnInit() {

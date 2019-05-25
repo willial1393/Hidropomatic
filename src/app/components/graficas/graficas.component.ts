@@ -23,7 +23,7 @@ export class GraficasComponent implements OnInit, OnDestroy {
     constructor(private messageService: MessageService,
                 private matlabService: MatlabService) {
         this.temperatura = {
-            labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+            labels: [],
             datasets: [
                 {
                     label: 'Grados celsius (°C)',
@@ -34,7 +34,7 @@ export class GraficasComponent implements OnInit, OnDestroy {
             ]
         };
         this.ventilador = {
-            labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+            labels: [],
             datasets: [
                 {
                     label: 'Voltaje (V)',
@@ -49,15 +49,30 @@ export class GraficasComponent implements OnInit, OnDestroy {
     getGraficas() {
         this.matlabService.getGraficas().subscribe(res => {
             Object.assign(this.graficas, res);
-            const datosTemperatura = this.graficas.temperatura.map(x => {
+            this.graficas.temperatura = this.graficas.temperatura.reverse();
+            this.graficas.ventilador = this.graficas.ventilador.reverse();
+            // Temperatura
+            const datosTemperatura: number[] = this.graficas.temperatura.map(x => {
                 return x.dato;
             });
-            const datosVentilador = this.graficas.ventilador.map(x => {
-                return x.dato;
-            });
+            const labelsTemperatura: number[] = [];
+            for (let i = 0; i < datosTemperatura.length; i++) {
+                labelsTemperatura.push(i + 1);
+            }
             this.temperatura.datasets[0].data = datosTemperatura;
-            this.ventilador.datasets[0].data = datosVentilador;
+            this.temperatura.labels = labelsTemperatura;
             this.chartTemperatura.refresh();
+
+            // Ventilador
+            const datosVentilador: number[] = this.graficas.ventilador.map(x => {
+                return x.dato;
+            });
+            const labelsVentilador: number[] = [];
+            for (let i = 0; i < datosVentilador.length; i++) {
+                labelsVentilador.push(i + 1);
+            }
+            this.ventilador.datasets[0].data = datosVentilador;
+            this.ventilador.labels = labelsVentilador;
             this.chartVentilador.refresh();
         });
     }

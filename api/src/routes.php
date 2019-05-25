@@ -11,11 +11,14 @@ use Slim\Http\Response;
 return function (App $app) {
 
     $app->get('/graficas/', function (Request $request, Response $response, array $args) {
+        $limit = 20;
         $temperatura = Graficas::where('nombre', 'TEMPERATURA')
-            ->limit(10)
+            ->limit(20)
+            ->orderBy('id', 'desc')
             ->get(['dato', 'tiempo']);
         $ventilador = Graficas::where('nombre', 'VENTILADOR')
-            ->limit(10)
+            ->limit(20)
+            ->orderBy('id', 'desc')
             ->get(['dato', 'tiempo']);
         $res = '{"temperatura":' . $temperatura . ',"ventilador":' . $ventilador . '}';
         $response->getBody()->write($res);

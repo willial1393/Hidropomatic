@@ -4,6 +4,7 @@
 
 export const environment = {
     production: false,
+    // endpoint: 'http://hidropomatic.tk/api/public/'
     endpoint: 'http://localhost/hidropomatic/api/public/'
 };
 
