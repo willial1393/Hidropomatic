@@ -13,11 +13,11 @@ return function (App $app) {
     $app->get('/graficas/', function (Request $request, Response $response, array $args) {
         $limit = 20;
         $temperatura = Graficas::where('nombre', 'TEMPERATURA')
-            ->limit(20)
+            ->limit($limit)
             ->orderBy('id', 'desc')
             ->get(['dato', 'tiempo']);
         $ventilador = Graficas::where('nombre', 'VENTILADOR')
-            ->limit(20)
+            ->limit($limit)
             ->orderBy('id', 'desc')
             ->get(['dato', 'tiempo']);
         $res = '{"temperatura":' . $temperatura . ',"ventilador":' . $ventilador . '}';
