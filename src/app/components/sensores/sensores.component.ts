@@ -22,8 +22,23 @@ export class SensoresComponent implements OnInit, OnDestroy {
 
     sensores: Sensores = new Sensores();
     threadVerificacion: any;
+    optionsTemperatura: any;
+    optionsHumedad: any;
+    optionsNivel: any;
+    optionsPH: any;
 
     constructor(private matlabService: MatlabService) {
+        this.optionsTemperatura = {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        min: 0,
+                        stepSize: 5,
+                        max: 40
+                    }
+                }]
+            }
+        };
         this.temperatura = {
             labels: ['Grados celsius °C'],
             datasets: [
@@ -34,6 +49,16 @@ export class SensoresComponent implements OnInit, OnDestroy {
                     data: [0]
                 }
             ]
+        };
+        this.optionsHumedad = {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        min: 0,
+                        max: 100
+                    }
+                }]
+            }
         };
         this.humedad = {
             labels: ['Porcentaje (%)'],
@@ -46,22 +71,43 @@ export class SensoresComponent implements OnInit, OnDestroy {
                 }
             ]
         };
+        this.optionsNivel = {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        min: 0,
+                        max: 100
+                    }
+                }]
+            }
+        };
         this.nivel = {
             labels: ['Porcentaje (%)'],
             datasets: [
                 {
                     label: 'Nivel 1',
                     backgroundColor: '#42A5F5',
-                    borderColor: '#1E88E5',
+                    borderColor: '#42A5F5',
                     data: [0]
                 },
                 {
                     label: 'Nivel 2',
-                    backgroundColor: '#42A5F5',
-                    borderColor: '#1E88E5',
+                    backgroundColor: '#3755f5',
+                    borderColor: '#3755f5',
                     data: [0]
                 }
             ]
+        };
+        this.optionsPH = {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        min: 0,
+                        max: 14,
+                        stepSize: 2
+                    }
+                }]
+            }
         };
         this.ph = {
             labels: ['pH'],
